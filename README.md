@@ -719,54 +719,6 @@ A: Translating legal knowledge, contributing to the `supportsafe/locales` langua
 
 ---
 
-### 6. License Details
-
-SupportSafe operates under the **MIT License**.
-
-> Copyright (c) 2026 SupportSafe Foundation
-> 
-> Permission is hereby granted, free of charge, to any person obtaining a copy
-> of this software and associated documentation files (the "Software"), to deal
-> in the Software without restriction, including without limitation the rights
-> to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-> copies of the Software, and to permit persons to whom the Software is
-> furnished to do so, subject to the following conditions:
-> 
-> The above copyright notice and this permission notice shall be included in all
-> copies or substantial portions of the Software.
-> 
-> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-> IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-> FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-> AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-> LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-> OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-> SOFTWARE.
-
----
-
-### 7. Code of Conduct
-
-#### Our Pledge
-In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
-
-#### Our Standards
-Examples of behavior that contributes to creating a positive environment include:
-- Using welcoming and inclusive language.
-- Being respectful of differing viewpoints and experiences.
-- Gracefully accepting constructive criticism.
-- Focusing on what is best for the community.
-- Showing empathy towards other community members.
-
-Examples of unacceptable behavior by participants include:
-- The use of sexualized language or imagery and unwelcome sexual attention or advances.
-- Trolling, insulting/derogatory comments, and personal or political attacks.
-- Public or private harassment.
-- Publishing others' private information, such as a physical or electronic address, without explicit permission.
-
-We maintain these spaces as safe harbors. Please refer to `CODE_OF_CONDUCT.md` for enforcement policies.
-
----
 
 ### 8. Project History and the "Why"
 
@@ -775,7 +727,6 @@ When we initialized the Haven project (Now **SupportSafe**), it was a response t
 We designed Steganography into the core to explicitly break this cycle. An innocent photograph shared to an anonymous board acts as an undetectable beacon to those scanning for it. The digital space becomes the loudest possible megaphone masquerading as silence. Every line of code written into the Titan LLM connectors, every vector stored inside MongoDB Atlas, is engineered strictly to bridge that gap with zero footprint on the survivor's device. 
 
 Thank you for exploring, utilizing, and advancing SupportSafe.
-\n
 
 ---
 
@@ -953,63 +904,14 @@ A: Translating legal knowledge, contributing to the `supportsafe/locales` langua
 
 ---
 
-### 6. License Details
-
-SupportSafe operates under the **MIT License**.
-
-> Copyright (c) 2026 SupportSafe Foundation
-> 
-> Permission is hereby granted, free of charge, to any person obtaining a copy
-> of this software and associated documentation files (the "Software"), to deal
-> in the Software without restriction, including without limitation the rights
-> to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-> copies of the Software, and to permit persons to whom the Software is
-> furnished to do so, subject to the following conditions:
-> 
-> The above copyright notice and this permission notice shall be included in all
-> copies or substantial portions of the Software.
-> 
-> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-> IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-> FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-> AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-> LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-> OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-> SOFTWARE.
-
----
-
-### 7. Code of Conduct
-
-#### Our Pledge
-In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
-
-#### Our Standards
-Examples of behavior that contributes to creating a positive environment include:
-- Using welcoming and inclusive language.
-- Being respectful of differing viewpoints and experiences.
-- Gracefully accepting constructive criticism.
-- Focusing on what is best for the community.
-- Showing empathy towards other community members.
-
-Examples of unacceptable behavior by participants include:
-- The use of sexualized language or imagery and unwelcome sexual attention or advances.
-- Trolling, insulting/derogatory comments, and personal or political attacks.
-- Public or private harassment.
-- Publishing others' private information, such as a physical or electronic address, without explicit permission.
-
-We maintain these spaces as safe harbors. Please refer to `CODE_OF_CONDUCT.md` for enforcement policies.
-
----
-
-### 8. Project History and the "Why"
+### 6. Project History and the "Why"
 
 When we initialized the Haven project (Now **SupportSafe**), it was a response to global tragedies highlighted repeatedly through silent statistics. Often, the individuals who need technology the most are those least able to access it securely. Abuse scales inherently through isolation, and standard support pipelines (calling hotlines, visiting government portals) leave digital footprints actively tracked by modern-day perpetrators utilizing stalkerware or router logs.
 
 We designed Steganography into the core to explicitly break this cycle. An innocent photograph shared to an anonymous board acts as an undetectable beacon to those scanning for it. The digital space becomes the loudest possible megaphone masquerading as silence. Every line of code written into the Titan LLM connectors, every vector stored inside MongoDB Atlas, is engineered strictly to bridge that gap with zero footprint on the survivor's device. 
 
 Thank you for exploring, utilizing, and advancing SupportSafe.
-\n
+
 
 ---
 
@@ -1171,82 +1073,6 @@ Functional hooks and strict React Server Components structure are mandatory. Pre
 
 ---
 
-### 5. Frequently Asked Questions (FAQ)
-
-**Q: In What Regions is SupportSafe Functional?**
-A: SupportSafe is mathematically region-agnostic for its Steganography workflows. However, the legal bot currently operates optimally regarding the Indian Constitution. Global laws (US, UK, EU) are being mapped into our Vector indexes progressively.
-
-**Q: Do you retain logs of user SOS generation?**
-A: As a strict security measure against forced auditing, the original unencoded logs are flushed securely every 15 minutes. We only retain the steganographic hash matching in the Authority index to recognize returning data. It acts as an irreversible checksum to the victim without revealing raw source to compromised endpoints.
-
-**Q: How does the AI Avatar identify psychological emergencies?**
-A: Utilizing multi-modal sentiment parsing, our backend intercepts high-risk lexicons (e.g., severe panic, self-harm keywords). When triggered, the system invokes emergency bypass protocols, presenting users with immediate psychological hotline overlays geographically targeted to their IP radius (via Edge middleware).
-
-**Q: I have no coding background. How can I contribute?**
-A: Translating legal knowledge, contributing to the `supportsafe/locales` language dictionaries, and spreading the project's methodologies into social spaces drastically scales our mission.
-
----
-
-### 6. License Details
-
-SupportSafe operates under the **MIT License**.
-
-> Copyright (c) 2026 SupportSafe Foundation
-> 
-> Permission is hereby granted, free of charge, to any person obtaining a copy
-> of this software and associated documentation files (the "Software"), to deal
-> in the Software without restriction, including without limitation the rights
-> to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-> copies of the Software, and to permit persons to whom the Software is
-> furnished to do so, subject to the following conditions:
-> 
-> The above copyright notice and this permission notice shall be included in all
-> copies or substantial portions of the Software.
-> 
-> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-> IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-> FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-> AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-> LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-> OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-> SOFTWARE.
-
----
-
-### 7. Code of Conduct
-
-#### Our Pledge
-In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
-
-#### Our Standards
-Examples of behavior that contributes to creating a positive environment include:
-- Using welcoming and inclusive language.
-- Being respectful of differing viewpoints and experiences.
-- Gracefully accepting constructive criticism.
-- Focusing on what is best for the community.
-- Showing empathy towards other community members.
-
-Examples of unacceptable behavior by participants include:
-- The use of sexualized language or imagery and unwelcome sexual attention or advances.
-- Trolling, insulting/derogatory comments, and personal or political attacks.
-- Public or private harassment.
-- Publishing others' private information, such as a physical or electronic address, without explicit permission.
-
-We maintain these spaces as safe harbors. Please refer to `CODE_OF_CONDUCT.md` for enforcement policies.
-
----
-
-### 8. Project History and the "Why"
-
-When we initialized the Haven project (Now **SupportSafe**), it was a response to global tragedies highlighted repeatedly through silent statistics. Often, the individuals who need technology the most are those least able to access it securely. Abuse scales inherently through isolation, and standard support pipelines (calling hotlines, visiting government portals) leave digital footprints actively tracked by modern-day perpetrators utilizing stalkerware or router logs.
-
-We designed Steganography into the core to explicitly break this cycle. An innocent photograph shared to an anonymous board acts as an undetectable beacon to those scanning for it. The digital space becomes the loudest possible megaphone masquerading as silence. Every line of code written into the Titan LLM connectors, every vector stored inside MongoDB Atlas, is engineered strictly to bridge that gap with zero footprint on the survivor's device. 
-
-Thank you for exploring, utilizing, and advancing SupportSafe.
-\n
-
----
-
 ## Extensive System Documentation & API Reference
 
 ### 1. Advanced Architecture Deep Dive
@@ -1402,21 +1228,5 @@ npm run lint
 npx prettier --write "src/**/*.{js,jsx,ts,tsx}"
 ```
 Functional hooks and strict React Server Components structure are mandatory. Prevent client boundaries unless directly triggering an interaction.
-
----
-
-### 5. Frequently Asked Questions (FAQ)
-
-**Q: In What Regions is SupportSafe Functional?**
-A: SupportSafe is mathematically region-agnostic for its Steganography workflows. However, the legal bot currently operates optimally regarding the Indian Constitution. Global laws (US, UK, EU) are being mapped into our Vector indexes progressively.
-
-**Q: Do you retain logs of user SOS generation?**
-A: As a strict security measure against forced auditing, the original unencoded logs are flushed securely every 15 minutes. We only retain the steganographic hash matching in the Authority index to recognize returning data. It acts as an irreversible checksum to the victim without revealing raw source to compromised endpoints.
-
-**Q: How does the AI Avatar identify psychological emergencies?**
-A: Utilizing multi-modal sentiment parsing, our backend intercepts high-risk lexicons (e.g., severe panic, self-harm keywords). When triggered, the system invokes emergency bypass protocols, presenting users with immediate psychological hotline overlays geographically targeted to their IP radius (via Edge middleware).
-
-**Q: I have no coding background. How can I contribute?**
-A: Translating legal knowledge, contributing to the `supportsafe/locales` language dictionaries, and spreading the project's methodologies into social spaces drastically scales our mission.
 
 ---
