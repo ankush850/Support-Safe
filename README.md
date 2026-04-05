@@ -30,19 +30,19 @@
 </div>
 
 
-### Inspiration 🌟
+### Inspiration 
 Imagine a woman trapped in silence, enduring daily fear and abuse, unable to seek help because her every move is monitored. For millions of women worldwide, this is a daily reality.  
 **SupportSafe** is an innovative 🌐 AI-powered solution designed to empower women in abusive situations by providing discreet ways to seek help, access mental health support, and receive legal guidance—without the risk of exposure.
 
 <br/>
 
-## What it Does 💡
+## What it Does 
 
 Violence against women remains a widespread yet often hidden issue. Approximately 1 in 3 women globally experience physical or sexual violence during their lifetime, most commonly from an intimate partner. In India, nearly 30% of women have reported experiencing domestic violence at least once, according to the World Health Organization and the National Family Health Survey.
 
 In many cases, individuals facing abuse are subjected to strict monitoring and limited communication. Phone calls, messages, and online activity may be closely watched, making it risky to seek help openly. This lack of safe communication channels leaves many without access to emotional support, legal information, or emergency assistance when they need it most.
 
-SupportSafe Solution 💪
+SupportSafe Solution 
 
 SupportSafe provides a discreet, AI-powered platform designed to help individuals in unsafe environments access support without drawing attention.
 
@@ -69,43 +69,25 @@ SupportSafe’s Law Bot delivers confidential, easy-to-understand legal guidance
 
 ---
 
-## Detailed Description 📝
+## Detailed Description 
 
 ### 1. Discreet SOS Messaging through Steganography
 For many women in abusive relationships who live under constant monitoring, finding a way to ask for help without alerting their abusers is critical. Support safe introduces a revolutionary SOS messaging system, using **steganography** to encode distress signals within innocent-looking images, like flowers or landscapes.
 
-### How it Works 🛠️
+### How it Works 
 
 On the user side, Support safe’s process begins with message generation, where the user enters brief details of their situation. Our LLM expands these inputs into complete, coherent sentences. The user then chooses an image prompt, like a flower or landscape, which the AI generates and encodes with the distress message through steganography. Once complete, the user shares this seemingly ordinary image on social media, where it appears innocuous to others, including any abusers monitoring the profile.
 On the authority side, Support safe's system continuously monitors social media for SOS images tagged with specific hashtags. Once detected, these images are decoded to extract the hidden message using reverse steganography. The decoded text is then broken down into structured segments for efficient analysis, after which it is stored in MongoDB, where cases are organized by severity level to prioritize urgent responses.
 ### 1. Discreet SOS Messaging through Steganography
 For many women in abusive relationships who live under constant monitoring, finding a way to ask for help without alerting their abusers is critical. Support safe introduces a revolutionary SOS messaging system, using **steganography** to encode distress signals within innocent-looking images, like flowers or landscapes.
 
-### How it Works 🛠️
+### How it Works 
 
 On the user side, Support safe’s process begins with message generation, where the user enters brief details of their situation. Our LLM expands these inputs into complete, coherent sentences. The user then chooses an image prompt, like a flower or landscape, which the AI generates and encodes with the distress message through steganography. Once complete, the user shares this seemingly ordinary image on social media, where it appears innocuous to others, including any abusers monitoring the profile.
 
 On the authority side, Support safe's system continuously monitors social media for SOS images tagged with specific hashtags. Once detected, these images are decoded to extract the hidden message using reverse steganography. The decoded text is then broken down into structured segments for efficient analysis, after which it is stored in MongoDB, where cases are organized by severity level to prioritize urgent responses.
 
-```mermaid
-graph TD
-
-subgraph Survivor_Workflow
-A[Survivor keywords] --> B[LLM expands message]
-B --> C[AWS Titan image]
-C --> D[Steganography encode]
-D --> E[Post image]
-end
-
-subgraph Authority_Workflow
-F[Scrape tags] --> G[Extract stego]
-G --> H{Hidden message?}
-H -->|Yes| I[LLM severity]
-H -->|No| J[Ignore]
-I --> K[MongoDB case]
-K --> L[Alert authority]
-end
-```
+![image alt](https://github.com/ankush850/Support-Safe-/blob/6a1a3c1c7e3470eea4ca221006f2dfcad8547e14/Flow-Diagram/1.png)
 
 ### What Sets Support safe Apart 
 
@@ -139,24 +121,7 @@ end
 - Storage in MongoDB: The parsed data is stored in MongoDB in a structured format, utilizing MongoDB’s document-based architecture to facilitate efficient retrieval and querying. Data fields are indexed for real-time access, enabling authorities to prioritize cases based on urgency and ensuring streamlined incident response.
 
 
-```mermaid
-sequenceDiagram
-    participant User
-    participant SupportSafe_App
-    participant AWS_Bedrock
-    participant Steganography_Engine
-    
-    User->>SupportSafe_App: Type short distress keywords
-    SupportSafe_App->>AWS_Bedrock: Generate full distress message (Titan LLM)
-    AWS_Bedrock-->>SupportSafe_App: Formatted text
-    User->>SupportSafe_App: Select "Flower" wrapper theme
-    SupportSafe_App->>AWS_Bedrock: Generate innocuous image
-    AWS_Bedrock-->>SupportSafe_App: Base64 Image
-    SupportSafe_App->>Steganography_Engine: Embed text via LSB encoding
-    Steganography_Engine-->>SupportSafe_App: Encoded Image
-    SupportSafe_App-->>User: Ready to transparently share
-```
-
+![image alt](https://github.com/ankush850/Support-Safe-/blob/6a1a3c1c7e3470eea4ca221006f2dfcad8547e14/Flow-Diagram/2.png)
 
 #### Culprit Similarity Matching
 
@@ -173,54 +138,11 @@ In a world where 60% of abused women lack private communication options, reachin
 
 **User UI Iteration Flow**
 
-```mermaid
-stateDiagram-v2
-direction LR
-
-[*] --> Authentication
-
-Authentication --> Dashboard : User Login
-
-state "Distress Reporting Workflow" as ReportFlow {
-
-    Dashboard --> InputKeywords : Start Report
-    
-    InputKeywords --> ExpandMessage : Generate Structured Message
-    
-    ExpandMessage --> ReviewMessage : User Verification
-    
-    ReviewMessage --> SelectTheme : Choose Image Theme
-    
-    SelectTheme --> GenerateImage : Generate Cover Image
-    
-    GenerateImage --> EncodeData : Steganography Encoding
-}
-
-EncodeData --> ShareInterface : Prepare Safe Image
-
-ShareInterface --> Exit : Share to Social Platform
-
-Exit --> [*]
-```
+![image alt](https://github.com/ankush850/Support-Safe-/blob/6a1a3c1c7e3470eea4ca221006f2dfcad8547e14/Flow-Diagram/3.png)
 
 **Authority UI Execution Flow**
 
-```mermaid
-stateDiagram-v2
-    %% UI State Machine for Authority Flow
-    [*] --> AuthorityDashboard
-    
-    state "Incident Management Viewer" as IncidentFlow {
-        AuthorityDashboard --> CaseTableOverview : Loads Prioritized Decoded Cases
-        CaseTableOverview --> CaseDetailView : Select Urgent Row
-        CaseDetailView --> ExtractedEntities
-        ExtractedEntities --> RunCulpritMatrix : Locate Repeat Offenders
-        RunCulpritMatrix --> HistoricalMatches : Displays Similar Vectors
-    }
-    
-    HistoricalMatches --> ActUponCase
-    ActUponCase --> [*] : Dispatch Help
-```
+![image alt](https://github.com/ankush850/Support-Safe-/blob/6a1a3c1c7e3470eea4ca221006f2dfcad8547e14/Flow-Diagram/4.png)
 
 ##  **2. AI Avatar for Mental Health Support** 
 
@@ -241,7 +163,7 @@ Whether a user experiences **panic attacks**, **emotional exhaustion**, or simpl
 
 
 
-### ✨ **What Sets It Apart:**
+###  **What Sets It Apart:**
 
 - **Tailored to Abuse Survivors:**  
   Unlike generic mental health apps, our AI avatar is specially trained to recognize and address the **unique psychological needs** of abuse survivors. The AI offers strategies that speak directly to the trauma of **intimate partner violence**, helping survivors manage their symptoms more effectively.
@@ -258,19 +180,9 @@ Whether a user experiences **panic attacks**, **emotional exhaustion**, or simpl
 
 
 
-### 🛠️ **Technical Details:**
+###  **Technical Details:**
 
-
-```mermaid
-graph TD
-    User((User)) -->|Voice/Text| Frontend[Next.js App]
-    Frontend -->|HTTP Request| Inference[AWS Bedrock / Gemini]
-    Inference -->|Generate Therapy Response| TTS[ElevenLabs API]
-    TTS -->|Voice Audio Stream| Avatar[Three.js GLTF Model]
-    Inference -->|Emotion Mapping| AvatarMorphs[Morph Targets]
-    AvatarMorphs --> Avatar
-    Avatar -->|Realistic Speech & Emotion| User
-```
+![image alt](https://github.com/ankush850/Support-Safe-/blob/6a1a3c1c7e3470eea4ca221006f2dfcad8547e14/Flow-Diagram/6.png)
 
 - **Model and Animation Loading:**  
   Upon initiating the conversation, the AI fetches **3D model files** (.glb format) and **animations** to bring the avatar to life. The avatar’s **facial morph targets** and animation sequences are initialized using **useGLTF**, allowing for **human-like interactions** with empathy.
@@ -297,36 +209,24 @@ Support safe is not just about providing immediate emotional and physical safety
 
 In many parts of the world, only 14% of women have access to formal legal assistance , often due to cultural barriers, financial constraints, or lack of awareness. Support safe aims to bridge this critical gap by offering **free, accessible legal guidance** at their fingertips 
 
-### **How It Works: 🤖**
+### **How It Works: **
 
 Support safe’s law bot is designed to provide **clear, understandable** information on a wide range of legal issues, tailored to the user’s unique situation . Women in need can simply ask the bot questions related to **abuse**, **divorce**, **child custody**, **property rights**, or other legal concerns, and receive instant, easy-to-understand responses based on national and international laws 
 
 
 
 
-### **What Sets It Apart: 💡**
+### **What Sets It Apart: **
 
-- **Accessible, On-Demand Legal Support:** Unlike traditional legal systems where waiting for an appointment or expensive consultations can delay action, the Support safe law bot is available 24/7 to provide **immediate legal advice** 🕒. Women no longer have to wait to understand their rights or options; the bot offers quick, reliable answers to legal queries at any time.
+- **Accessible, On-Demand Legal Support:** Unlike traditional legal systems where waiting for an appointment or expensive consultations can delay action, the Support safe law bot is available 24/7 to provide **immediate legal advice** . Women no longer have to wait to understand their rights or options; the bot offers quick, reliable answers to legal queries at any time.
   
 - **Global Reach & Customizable to Local Laws:** Support safe’s law bot is designed to adapt to various countries' laws . Whether users are in **India**, the **US**, or beyond, they will receive information specific to their region's legal framework, ensuring the advice is **relevant** and **applicable** to their situation.
 
 - **Empowerment Through Knowledge:** Legal systems can often feel intimidating or inaccessible, especially for women facing abuse or discrimination. By providing easy access to legal resources, Support safe empowers women to take **informed action**. It helps them advocate for their rights, pursue justice, and better understand the complexities of legal processes 
 
-### **Technical Details 🛠️**
+### **Technical Details **
 
-
-```mermaid
-graph LR
-    UserQuery[User Question] --> RAG_Pipeline
-    subgraph Vector_Retrieval[RAG Retrieval Flow]
-        RAG_Pipeline --> EmbedQuery[Embed into Vector]
-        EmbedQuery --> MongoDB[(MongoDB Atlas Search)]
-        MongoDB --> Docs[Retrieve Constitution Docs]
-    end
-    Docs --> Groq_Inference[Groq Gemma Model]
-    Groq_Inference --> Format[Generate Legal Advice]
-    Format --> UserReply[Law Bot Answer]
-```
+![image alt](https://github.com/ankush850/Support-Safe-/blob/6a1a3c1c7e3470eea4ca221006f2dfcad8547e14/Flow-Diagram/5.png)
 
 **Preprocessing Phase (Document Embedding Preparation) :**
 1. Collect legal documents, such as the Indian Constitution and related statutes 
@@ -463,7 +363,7 @@ NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
 
 **(Category: Best Use of Amazon Bedrock)**
 
-- Text Generation and Text Expansion ✍️
+- Text Generation and Text Expansion 
 
   - AI powers Support safe's ability to transform brief, incomplete messages into coherent, full distress signals. Through Large Language Models (LLMs) like Titan Text G1 - Express, Support safe expands user input, turning simple keywords or short phrases into comprehensive messages. This is essential in high-stress situations where a woman may not have the time or mental clarity to articulate her circumstances in full. The model ensures that the message accurately represents the severity of the situation while still being discreet.
   - Example: If a user types “help, scared, locked in room,” the AI expands it into a full message like: "I am trapped in my room, scared and unable to leave. Please help me." This message is then encoded in an image to be shared safely.
@@ -475,42 +375,42 @@ NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
     When an authority initiates a search by selecting "Find Match," the system performs a cosine similarity operation on the stored embeddings. By comparing the incoming profile with existing data, the system identifies top N matches based on similarity scores, allowing authorities to see connections across reported cases.
   - Using **Titan Text G1 - Express** LLM model
 
-- AI-Powered Poem Generation 📝
+- AI-Powered Poem Generation 
 
   - In moments of emotional distress, sometimes the simplest words can bring comfort. Support safe's AI-Powered Poem Generator provides empowering, reassuring poems designed to remind women that help is on the way and that they are not alone. The AI generates short, encouraging poems based on the user's emotional state or current needs. These poems are designed to provide emotional support and the assurance that change is possible.
   - Using **Titan Text G1 - Express** LLM model
 
-- AI to Detect Severity of Situations 🚨
+- AI to Detect Severity of Situations 
 
   - The LLM processes large text inputs and sorts them based on the severity and nature of the abuse, making it easier for authorities to quickly take action without reading through long descriptions. 
 
-- Image Generation 🖼️
+- Image Generation 
 
   - AI is used to create custom images based on user input, such as landscapes, flowers, or everyday objects. This enables the use of steganography—embedding distress messages within the images. These generated images appear completely innocent to outsiders, while secretly containing encoded help requests.
   - Example: A user may select an image of a flower. The AI embeds a distress message, which looks like a normal social media post but contains a hidden cry for help when decoded.
   - Using **Titan Image Generator VI** LLM model
 
-- AI-Powered Law Bot for Legal Support ⚖️
+- AI-Powered Law Bot for Legal Support 
 
   - Support safe’s Law Bot leverages AI to offer instant, confidential legal guidance. Trained on a vast array of legal resources—including national constitutions, local laws, and case precedents—the AI provides women with easy-to-understand answers to their legal questions, empowering them to take control of their situations. The Law Bot breaks down complex legal jargon into simple language, ensuring clarity and accessibility.
   - Example: A user can ask, "What should I do if my spouse is abusing me?" and the Law Bot will provide a clear step-by-step answer based on the relevant legal rights, such as filing a complaint or seeking a restraining order. 
   - Using **Titan Text G1 - Express** LLM model
 
-- Therapy Bot for Mental Health Support 💬
+- Therapy Bot for Mental Health Support 
 
   - Support safe’s Therapy Bot uses AI to provide personalized mental health support. This bot offers coping strategies, emotional support, and mindfulness exercises to help women manage anxiety, depression, and PTSD. By analyzing the user's input, the AI tailors its responses to the emotional state of the user, ensuring relevant advice is given in real-time.
   - Example: If a user is feeling anxious, the Therapy Bot may suggest breathing exercises, a grounding technique, or offer calming affirmations to reduce stress.
   - Using **Titan Text G1 - Express** LLM model
 
 
-- Vector Embedding for Personalized Experience 🧠
+- Vector Embedding for Personalized Experience 
 
   - To make interactions with the AI more personalized and contextually aware, vector embeddings are used to store and retrieve information. For each user, key data points (like their emotional state, past conversations, and preferences) are stored in MongoDB using embeddings generated from AI models like Sentence Transformers. This allows the AI to provide more informed responses over time.
   - Example: The AI can remember past interactions, such as a user’s previous emotional states or preferred coping strategies. This personalized knowledge allows the AI to provide more targeted advice, improving the support it offers over time.
   -  Using **Titan Text G1 - Express** LLM model and **LangChain for embedding**
 
 
-### **How Atlas Vector Search Is Used in the Project 🤖:**
+### **How Atlas Vector Search Is Used in the Project :**
 
 **(Category: Best Use of Atlas Vector Search)**
 
@@ -557,7 +457,7 @@ LangChain allows efficient processing of large PDFs by recursively splitting the
 - Recursive PDF Splitting: LangChain’s PDFReader extracts text from PDFs, and the RecursiveCharacterTextSplitter splits the content into smaller sections based on size or logical breaks (e.g., paragraphs, chapters), ensuring that each chunk fits within token limits for embedding generation.
 - Embedding Generation: After splitting the text, LangChain uses embedding models (e.g., OpenAI Embeddings) to convert each chunk into a vector representation. These embeddings capture the semantic meaning of the text and can be stored in a vector database for similarity searches.
 
-## Global System Architecture 🏛️
+## Global System Architecture 
 
 ```mermaid
 graph TD
